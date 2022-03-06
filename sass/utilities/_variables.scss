@@ -1,0 +1,36 @@
+// Colors
+$white: #fff;
+$color-primary: rgb(1, 1, 65);
+$color-primary-light: lighten($color-primary, 25%);
+$color-bg: #f8f8ff;
+$color-bg-dark: darken($color-bg, 15%);
+$color-hover: rgb(196, 183, 255);
+$color-table-blue: rgb(136, 226, 230);
+$color-table-blue-dark: darken($color-table-blue, 10%);
+$color-table-grey: rgb(223, 222, 222);
+$color-text: #424141;
+$complement: complement($color-primary);
+$sports-bg: rgb(230, 230, 230);
+$color-overlay-bg: rgba(1, 1, 65, 0.9);
+
+// Fonts
+$font-stack-primary: 'Roboto', sans-serif;
+$font-stack-secondary: 'Open Sans', sans-serif;
+$font-stack-headline: 'Permanent Marker', cursive;
+$font-stack-cursive: 'Cedarville Cursive', cursive;
+
+// Images
+$bg-height: 15em;
+$bg-height-med: 18em;
+$image-placement: no-repeat center/cover;
+$bg-lg-height: 25em;
+$bg-xl-height: 28em;
+
+//Sass Maps
+$breakpoints: (
+  'xs': 600px,
+  'sm': 601px,
+  'med': 768px,
+  'lg': 992px,  
+  'x-lg': 1200px,
+  );

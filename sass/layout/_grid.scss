@@ -1,0 +1,63 @@
+.primary {
+  grid-area: primary;
+}
+
+.secondary {
+  grid-area: secondary;
+}
+
+.tertiary {
+  grid-area: tertiary;
+}
+
+.quaternary {
+  grid-area: quaternary;
+}
+
+.section {
+  grid-area: section;
+}
+
+.article {
+  grid-area: article
+}
+
+.container {
+  @include mq(med) {
+    display: grid;
+    grid-gap: ems(20);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "primary secondary"
+      "tertiary quaternary";
+  }
+  @include mq(lg) {
+    display: initial;
+  }
+}
+
+.primary,
+.secondary,
+.tertiary,
+.quaternary {
+  @include mq(lg) {
+    margin-top: 1em;
+    @include flexy;
+  }
+}
+
+.learn {
+  margin-bottom: 3em;
+  @include mq(med) {
+    @include flexy($dir: column);
+    height: ems(300);
+    margin-bottom: 2em;
+    }
+  @include mq(lg) {
+    flex-basis: 87em;
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+
+

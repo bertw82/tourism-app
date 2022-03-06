@@ -1,0 +1,72 @@
+
+/* Float Clearfix ------------------ */
+  
+.clearfix {
+  &:after{
+  content: "";
+  display: table;
+  clear: both;
+  }
+}
+
+/* CSS Accordion ------------------ */
+
+.tab {
+	position: relative;
+	width: 100%;
+	input { 
+		left: 5px;
+		position: absolute;
+		top: 5px;
+		z-index: -999;
+	}
+	label {
+		background: $complement;
+		color: $white; 
+		cursor: pointer;
+		display: block;
+		font-weight: bold;
+		line-height: 3;
+		margin-bottom: 0.5em;
+		padding-left: 0.5em; 
+		transition: letter-spacing 0.55s ;
+	}	
+	&-group {
+		margin: 1em auto 0;
+		max-width: 40em;
+		width: 100%;
+	}
+	&-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.35s;
+		p {
+			margin: 1em 0;
+		}
+	}
+}
+
+.tab input:focus + label,
+.tab label:hover{ 
+	@include hover($complement);
+	letter-spacing: 1px; 
+}
+
+/* open the tab when label is checked */
+
+.tab input:checked ~ .tab-content { 
+	max-height: 14.25em;
+	@include mq(med) {
+		max-height: 6.25em;
+	}
+}
+
+.tab > input:not(:focus) ~ .tab-content { 
+	max-height: 0;
+	transition: all .75s cubic-bezier(0.19, 1, 0.22, 1) .15s;
+}
+
+
+
+
+

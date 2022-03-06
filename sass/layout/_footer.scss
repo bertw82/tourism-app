@@ -1,0 +1,39 @@
+.main-footer {
+  @include flexy($just: space-around);
+  background: $color-primary;
+}
+
+.main-footer p {
+  @include nav-font;
+  color: $white;
+}
+
+.main-footer a {
+  @include nav-font;
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+.footer-flex {
+  margin-top: 2em;
+  @include flexy($just: space-between);
+  border-top: 1px solid rgba(0,0,0,.4);
+}
+
+.indy-flex-1,
+.indy-flex-2 {
+  @include flexy($dir: column);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.indy-flex-1 p {
+text-align: left;
+font-size: .8rem;
+}
+
+.indy-flex-2 p {
+  text-align: right;
+  font-size: .8rem;
+}

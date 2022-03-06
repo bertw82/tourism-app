@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Welcome to Indianapolis!' })
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('pages/index', { title: 'Welcome to Indianapolis!' })
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'Welcome to Indianapolis!' })
+  res.render('pages/about', { title: 'About Indianapolis' })
 });
 
 router.get('/activities', function(req, res, next) {

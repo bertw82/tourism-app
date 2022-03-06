@@ -1,0 +1,61 @@
+/* Table Styles */
+
+caption {
+  font-size: 1.3125rem;
+  font-weight: 600;
+  padding: .9em;
+  @include mq(lg) {
+    font-size: 2rem;
+  }
+}
+
+table {
+  margin: 0 auto 2em;
+  border-radius: ems(5);
+  box-shadow: 0 ems(5) ems(3) ems(2);
+  color: rgb(34, 34, 34);
+  @include mq(med) {
+    width: 35em;
+  }
+}
+
+thead > tr {
+  background: $color-table-blue;
+}
+
+th[scope="col"] {
+  background-color: $color-table-blue-dark;
+  font-size: 1.125rem;
+  @include mq(lg) {
+    font-size: 1.3125rem;
+  }
+}
+
+th {
+  font-size: .9rem;
+  padding: .3125em;
+  @include mq(med) {
+    padding: 1em 2em 1em 2em;
+  }
+} 
+
+td[colspan="3"] {
+  font-style: italic;
+}
+
+tr {
+  height: 3em;
+  background: $color-table-grey;
+  & > td {
+    font-size: .8rem;
+    padding: .3125em;
+    @include mq(med) {
+      padding: 2em;
+    }
+  }
+  
+}
+
+tr:nth-child(2n+2) {
+  background: rgb(136, 226, 230);
+}

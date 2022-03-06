@@ -1,0 +1,19 @@
+.photo-gallery {
+  @include mq(med) {
+    margin: 0 auto;
+    max-width: 595px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: ems(20);
+  }
+  @include mq(lg) {
+    max-width: 895px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  div {
+    margin-bottom: 1em;
+    @include mq(med) {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+img {
+  width: 100%;
+  .events & {
+    @include mq(lg) {
+      width: 80%;
+      margin-left: 0;
+    }
+  }
+  &[src^="images/colts.jpg"] {
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,.6);
+    @include mq(med) {
+    width: 60%;
+    float: right;
+    margin-left: ems(10);
+    }
+    @include mq(lg) {
+      width: 50%;
+      margin-left: 1em;
+    }
+  }
+  &[src$="thumbnail.jpg"] {
+    width: 280px;
+  }
+  &[src^="images/city-hall.jpg"] {
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,.6);
+    @include mq(lg) {
+      width: 75%;
+    }
+  }
+}
+
+.park-picture {
+  position: relative;
+  @include mq(med) {
+    max-width: 40em;
+    margin: 2em auto 0;
+  }
+  figure {
+    margin: 0;
+    line-height: 0;
+    position: relative;
+  }
+  figcaption {
+    font-size: .9em;
+    line-height: 1.5;
+    color: #fff;
+    padding: .3em 2em;	
+    background: rgba(19,43,102, .85);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    @include mq(med) {
+      padding: 1em;
+    }
+  }
+}
+
+
+
+
+  

@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var pagesRouter = require('./routes/pages');
 
 var app = express();
+// var router = express.Router();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,11 +21,19 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/home', pagesRouter);
+app.use('/indianapolis', pagesRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+  // const err = new Error('Not Found');
+  // err.message = 'Page Not Found';
+  // err.status = 404;
+  // console.log(`Error ${err.status}: ${err.message}`);
+  // res.render('error/error', { err });
+  // next();
 });
 
 // error handler
@@ -35,7 +44,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error/error', {err});
 });
 
 module.exports = app;

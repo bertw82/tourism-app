@@ -1,0 +1,62 @@
+extends ../layout
+
+block content
+  .banner
+    h1= title
+
+block main 
+  .container
+    #about.primary
+      section.item
+        h2 About Indy
+        img(src="images/statue.jpg", alt="picture of statue")
+      article.learn
+        p
+          | Indianapolis is the state capital and most populous city in Indiana. It
+          | is the 17th most populous city in the US, with a metro population of
+          | 2.5 million
+          br
+          br
+          | Indianapolis  is home to multiple professional sports teams, and is 
+          | known for the world&apos;s largest single-day sporting event, 
+          | the Indianapolis 500.
+        a.callout(href="about.html") Learn more about Indy
+    #activities.secondary
+      section.item
+        h2 Things to Do
+        img(src="images/crownhill.jpg", alt="view of Indy from cemetary")
+      article.learn
+        p
+          | Indianapolis is home to world-renowned museums and arts organizations, such as the Indianapolis Symphony 
+          | Orchestra.
+          br
+          br
+          | Indianapolis also maintains 211 parks and is home to the largest collection of war
+          | monuments in the U.S. outside of Washington, D.C.
+        a.callout(href="activities.html") Learn about things to do
+    #hotels.tertiary
+      section.item
+        h2 Where to Stay
+        img(src="images/monument.jpg", alt="Soldiers and Sailors statue in Indy")
+      article.learn
+        p
+          | Indianapolis has accommodations for every type of traveler, from name-brand hotels, one-of-a-kind art 
+          | hotels, and B&amp;B&apos;s.
+          br
+          br
+          | See our list of excellent and highly rated hotels, which is updated weekly. We are sure to have the perfect 
+          | place for you to stay.
+        a.callout(href="hotels.html") Learn where to stay
+    #subscribe.quaternary
+      section.item
+        h2 Photo Gallery
+        img(src="images/sunset.jpg", alt="picture of a sunset")
+      article.learn
+        p
+          | Sunsets in Indianapolis are just one of the beautiful and picturesque images one can capture in
+          | Indianapolis.
+          br
+          br
+          | Check out our photo gallery of images taken in Indianapolis by photographer Bert Witzel, and come to the city
+          | soon to capture your own image!
+        a.callout(href="gallery.html") See our photo gallery

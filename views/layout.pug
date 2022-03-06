@@ -10,4 +10,17 @@ html
     link(rel="stylesheet" href="css/baguetteBox.min.css")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
-    block header
+    header 
+      include nav/mobile_nav
+      include nav/main_nav
+      block content
+
+    main 
+      block main
+      include footer/footer_info.pug
+
+    include footer/main_footer.pug
+
+    script(src="js/app.js")
+   
+ 

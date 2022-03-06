@@ -1,0 +1,83 @@
+main {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.tips {
+  margin: 2em auto 0;
+  @include mq(med) {
+    max-width: 40em;
+    flex-basis: 85em;
+  }
+}
+
+.sports {
+  background-color: $color-bg-dark;
+  border-radius: ems(5);
+  @include flexy($wrap: wrap);
+  margin-bottom: 1em;
+  margin-top: 2em;
+  img {
+    width: ems(100);
+    border-radius: 5px;
+  }
+  &-link {
+    display: inline-block;
+    width: 7em;
+    padding: ems(10);
+    background: $color-primary;
+    color: $white;
+    border-radius: ems(5);
+    box-shadow: 3px 3px 3px rgba(0,0,0,.6);
+    transition: background ease-in-out .3s, color ease-in-out .3s, 
+                transform ease-in-out .3s;
+    &:hover {
+      background: $color-primary-light;
+      border-radius: ems(5);
+      transform: skewX(-5deg);
+    }
+  }
+  & > div {
+    width: 50%;
+    margin-bottom: 1em;
+    @include mq(med) {
+      width: 33.33%;
+    }
+    @include mq(lg) {
+      width: 16.66%;
+    }
+  }
+}
+
+.gallery-div {
+  margin-top: 1em;
+}
+
+.aside-know {
+  background: darkcyan;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  color: $white;
+  @include mq(med) {
+    margin-top: 54px;
+    margin-left: 20px;
+  }
+  ul {
+    text-align: left;
+    padding-left: 20px
+  }
+}
+
+.article-aside {
+  @include mq(med) {
+    @include flexy;
+  }
+  
+}
+
+
+
+
+

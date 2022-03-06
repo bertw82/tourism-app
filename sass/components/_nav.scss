@@ -1,0 +1,68 @@
+.main-nav {
+  // @include flexy($just: space-around);
+  @include flexy;
+  @include nav-style {
+    height: 3.125em;
+  };
+  @include mq(med) {
+    height: 3.625em;
+    justify-content: space-around;
+  }
+  a {
+    display: block;
+    transition: transform .2s, color .2s;
+    @include nav-font {
+      font-size: 1rem;
+    };
+    // @include mq(lg) {
+    //   font-size: 1em;
+    // }
+    &:hover {
+      border: none;
+      transform: scale(1.3);
+      font-weight: 1000;
+    }
+  }
+  li {
+    color: $white;
+    list-style: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    // flex-grow: 1;
+    // @include mq(sm) {
+    //   display: none;
+    // }
+    @include mq(med) {
+      // display: initial;
+      padding: 1.2em 1em;
+    }
+    &:nth-child(2) {
+      @include nav-font;
+      margin-right: auto;  
+    }
+    //   @include mq(med) {       
+    //     display: initial;
+    //     margin-right: auto;
+    //   }
+    //   @include mq(lg) {
+    //   font-size: 1em;
+    //   }
+    // }
+  }
+}
+
+#mainNav li {
+  display: none;
+  @include mq(med) {
+    display: initial;
+  }
+}
+
+
+
+
+
+
+
+
+

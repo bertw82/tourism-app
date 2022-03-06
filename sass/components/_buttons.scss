@@ -1,0 +1,18 @@
+.callout {
+  background: $color-primary;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: .6125em;
+  transition: background .5s ease-out, letter-spacing .5s ease-out;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 0 .625em 0 .625em ;
+  &:hover {
+    background: $color-primary-light;
+    letter-spacing: 2px;
+  }
+  @include mq(med) {
+    margin: auto auto 0;
+  }
+}
