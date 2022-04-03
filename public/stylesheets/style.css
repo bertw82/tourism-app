@@ -615,17 +615,7 @@ a:active {
 }
 
 /* CSS Accordion ------------------ */
-.tab {
-  position: relative;
-  width: 100%;
-}
-.tab input {
-  left: 5px;
-  position: absolute;
-  top: 5px;
-  z-index: -999;
-}
-.tab label {
+.tab-p {
   background: #414101;
   color: #fff;
   cursor: pointer;
@@ -635,6 +625,12 @@ a:active {
   margin-bottom: 0.5em;
   padding-left: 0.5em;
   transition: letter-spacing 0.55s;
+}
+.tab-p:hover {
+  letter-spacing: 1px;
+}
+.tab-p:hover:hover {
+  background-color: #8c8c02;
 }
 .tab-group {
   margin: 1em auto 0;
@@ -650,21 +646,17 @@ a:active {
   margin: 1em 0;
 }
 
-.tab input:focus + label,
-.tab label:hover {
-  letter-spacing: 1px;
-}
-.tab input:focus + label:hover,
-.tab label:hover:hover {
-  background-color: #8c8c02;
-}
-
 /* open the tab when label is checked */
-.tab input:checked ~ .tab-content {
+.tab-clicked {
   max-height: 14.25em;
 }
+.tab-clicked p {
+  margin: 1em 0;
+  background-color: #fff;
+  color: #424141;
+}
 @media (min-width: 768px) {
-  .tab input:checked ~ .tab-content {
+  .tab-clicked {
     max-height: 6.25em;
   }
 }

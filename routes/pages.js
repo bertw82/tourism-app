@@ -11,19 +11,19 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/activities', function(req, res, next) {
-  res.render('index', { title: 'Welcome to Indianapolis!' })
+  res.render('pages/activities', { title: 'Things To Do' })
 });
 
-router.get('/hotels', function(req, res, next) {
-  res.render('index', { title: 'Welcome to Indianapolis!' })
+router.get('/stay', function(req, res, next) {
+  res.render('pages/stay', { title: 'Where to Stay in Indy' })
 });
 
 router.get('/gallery', function(req, res, next) {
-  res.render('index', { title: 'Welcome to Indianapolis!' })
+  res.render('pages/gallery', { title: 'Photo Gallery' })
 });
 
 router.get('/subscribe', function(req, res, next) {
-  res.render('index', { title: 'Welcome to Indianapolis!' })
+  res.render('pages/subscribe', { title: 'Welcome to Indianapolis!' })
 });
 
 module.exports = router;

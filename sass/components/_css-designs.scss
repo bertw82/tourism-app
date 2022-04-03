@@ -12,25 +12,21 @@
 /* CSS Accordion ------------------ */
 
 .tab {
-	position: relative;
-	width: 100%;
-	input { 
-		left: 5px;
-		position: absolute;
-		top: 5px;
-		z-index: -999;
-	}
-	label {
-		background: $complement;
-		color: $white; 
-		cursor: pointer;
-		display: block;
-		font-weight: bold;
-		line-height: 3;
-		margin-bottom: 0.5em;
-		padding-left: 0.5em; 
-		transition: letter-spacing 0.55s ;
-	}	
+  &-p {
+  background: $complement;
+  color: $white; 
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 3;
+  margin-bottom: 0.5em;
+  padding-left: 0.5em; 
+  transition: letter-spacing 0.55s;
+  &:hover{ 
+    @include hover($complement);
+    letter-spacing: 1px; 
+  }
+  }
 	&-group {
 		margin: 1em auto 0;
 		max-width: 40em;
@@ -46,15 +42,15 @@
 	}
 }
 
-.tab input:focus + label,
-.tab label:hover{ 
-	@include hover($complement);
-	letter-spacing: 1px; 
-}
 
 /* open the tab when label is checked */
 
-.tab input:checked ~ .tab-content { 
+.tab-clicked { 
+  p {
+    margin: 1em 0;
+    background-color: $white;
+    color: $color-text;
+  }
 	max-height: 14.25em;
 	@include mq(med) {
 		max-height: 6.25em;

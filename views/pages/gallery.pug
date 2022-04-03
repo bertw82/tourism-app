@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .brochure
+    h1= title
+
+block main 
+  h2 Photo Gallery
+  p
+    i Click on an image to open a lightbox image gallery
+  .photo-gallery
+    //- This StackOverflow post helped me below: https://stackoverflow.com/questions/52841416/iteration-with-pug-over-an-object
+    - var pictures = [{"key": "1", "title": "Downtown Indianapolis Skyline"}, {"key": "2", "title": "Bridge over the downtown canal"}, {"key": "3", "title": "Street sign on the Cultural Trail"}, {"key": "4", "title": "Flowers at Pogues Run"}, {"key": "5", "title": "Mural at Library Square"}, {"key": "6", "title": "Downtown Indianapolis Church"}, {"key": "7", "title": "Red Line Rapid Transit Stop"}, {"key": "8", "title": "Central Library"}, {"key": "9", "title": "Indiana Flag"}]
+    each picture in pictures
+      div 
+        a(href=`../images/gallery-images/gallery-${picture.key}.jpg`, data-caption=`${picture.title}`)
+          img(src=`../images/gallery-images/gallery-${picture.key}-thumbnail.jpg`, alt=`${picture.title}`)
+
+  

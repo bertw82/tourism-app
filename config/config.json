@@ -1,0 +1,15 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "database/hotels.db"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "database/hotels.db"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "database/hotels.db"
+  }
+}
+

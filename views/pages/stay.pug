@@ -1,0 +1,61 @@
+extends ../layout
+
+block content
+  .hotels
+    h1= title
+
+block main 
+  .article-aside
+    article.tips
+      p
+        | There are many wonderful hotels and B&amp;B&apos;s to stay when you visit Indianapolis.
+        | Indy&apos;s hotels are known for their walkability to all of the major highlights: Lucas Oil 
+        | Stadium, Indiana Convention Center, and much more.
+        br
+        br
+        | Further down this page is a list of the
+        strong most
+        | popular hotels in Indy.
+      img(src="images/city-hall.jpg", alt="Picture of State of Indiana City Hall")
+    aside.aside-know
+      h3 Did you know?
+      ul
+        li
+          p Indianapolis is the largest major U.S. city that&apos;s not located on a navigable river
+        li
+          p The Children&apos;s Museum of Indianapolis is the largest children&apos;s museum in the world
+        li
+          p The famous ballpark song &quot;Take Me Out to the Ballgame&quot; was written by Indianapolis native, Albert Von Tilzer
+        li
+          p Author Kurt Vonnegut was born and raised in Indy
+  table
+    caption Hotels
+    thead
+      tr
+        th(scope="col") Name
+        th(scope="col") Email
+        th(scope="col") Phone
+    tfoot
+      tr
+        td(colspan="3") Data is updated weekly
+    tbody
+      tr
+        th Sheraton
+        td sheraton@email.com
+        td 123-456-7890
+      tr
+        th Hilton
+        td hilton@email.com
+        td 123-456-7890
+      tr
+        th Marriot
+        td hilton@email.com
+        td 123-456-7890
+      tr
+        th Holiday Inn
+        td holidayinn@email.com
+        td 123-456-7890
+      tr
+        th Aloft
+        td aloft@email.com
+        td 123-456-7890
