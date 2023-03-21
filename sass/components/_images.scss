@@ -1,20 +1,25 @@
+@use '../utilities/functions';
+@use '../utilities/variables';
+@use'../utilities/mixins';
+
 img {
   width: 100%;
   .events & {
-    @include mq(lg) {
+    @include mixins.mq(lg) {
       width: 80%;
       margin-left: 0;
     }
   }
-  &[src^="images/colts.jpg"] {
+  &[src$="images/colts.jpg"] {
     padding: 5px;
     border: 1px solid rgba(0,0,0,.6);
-    @include mq(med) {
+    border-radius: functions.ems(5);
+    @include mixins.mq(med) {
     width: 60%;
     float: right;
-    margin-left: ems(10);
+    margin-left: functions.ems(10);
     }
-    @include mq(lg) {
+    @include mixins.mq(lg) {
       width: 50%;
       margin-left: 1em;
     }
@@ -22,18 +27,23 @@ img {
   &[src$="thumbnail.jpg"] {
     width: 280px;
   }
-  &[src^="images/city-hall.jpg"] {
+  &[src$="images/city-hall.jpg"] {
     padding: 5px;
     border: 1px solid rgba(0,0,0,.6);
-    @include mq(lg) {
+    border-radius: 5px;
+    @include mixins.mq(lg) {
       width: 75%;
     }
   }
 }
 
+// Activities page main picture
 .park-picture {
   position: relative;
-  @include mq(med) {
+  img {
+    border-radius: 5px;
+  }
+  @include mixins.mq(med) {
     max-width: 40em;
     margin: 2em auto 0;
   }
@@ -51,11 +61,52 @@ img {
     position: absolute;
     bottom: 0;
     width: 100%;
+    border-radius:  0 0 5px 5px;
     
-    @include mq(med) {
+    @include mixins.mq(med) {
       padding: 1em;
     }
   }
+}
+
+// home page image hover
+.photo {
+	position: relative;
+	line-height: 0;
+	overflow: hidden;
+  border-radius: 5px;
+}
+
+.photo-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+	left: 0;
+    opacity: 0;
+	transition: opacity .5s;
+	display: flex;
+	 flex-direction: column;
+     flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;  
+	background: rgba(0,0,0, .5);
+}
+.photo-overlay p {
+	margin-bottom: 2em;
+  font-size: 2em;
+}
+.photo-overlay:hover {
+	opacity: 1;
+}
+.photo img {
+	transform-origin: 0 0;
+    transition: transform .4s ease-out;
+}
+
+.photo:hover img {
+	transform: scale(1.1);
 }
 
 

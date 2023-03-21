@@ -1,15 +1,32 @@
 extends ../layout
 
 block content
-  .banner
-    h1= title
+
+  //- Slideshow container
+  .slideshow-container
+    h1.home-title= title
+    //- Full-width images with number and caption text
+    .slideshow-pictures.fade
+      img(src="../images/slideshow-img/tablet-slide-1.jpg")
+    .slideshow-pictures.fade
+      img(src="../images/slideshow-img/tablet-slide-2.jpg")
+    .slideshow-pictures.fade
+      img(src="../images/slideshow-img/tablet-slide-3.jpg")
+    //- Next and previous buttons
+    a.prev &#8249;
+    a.next &#8250;
+
 
 block main 
   .container
     #about.primary
       section.item
         h2 About Indy
-        img(src="images/statue.jpg", alt="picture of statue")
+        .photo.img-about
+          img(src="images/statue.jpg", alt="picture of statue")
+          .photo-overlay
+            p.text-photo Central Library
+            a.btn-photo(href="https://www.visitindy.com/indianapolis-public-library-central-library", target="_blank") Learn More
       article.learn
         p
           | Indianapolis is the state capital and most populous city in Indiana. It
@@ -20,11 +37,15 @@ block main
           | Indianapolis  is home to multiple professional sports teams, and is 
           | known for the world&apos;s largest single-day sporting event, 
           | the Indianapolis 500.
-        a.callout(href="about.html") Learn more about Indy
+        a.btn(href="/indianapolis/about") Learn more about Indy
     #activities.secondary
       section.item
         h2 Things to Do
-        img(src="images/crownhill.jpg", alt="view of Indy from cemetary")
+        .photo.img-about
+          img(src="images/crownhill.jpg", alt="view of Indy from cemetary")
+          .photo-overlay
+            p.text-photo Crownhill Cemetery
+            a.btn-photo(href="https://crownhillhf.org/visit/", target="_blank") Learn More
       article.learn
         p
           | Indianapolis is home to world-renowned museums and arts organizations, such as the Indianapolis Symphony 
@@ -33,11 +54,15 @@ block main
           br
           | Indianapolis also maintains 211 parks and is home to the largest collection of war
           | monuments in the U.S. outside of Washington, D.C.
-        a.callout(href="activities.html") Learn about things to do
+        a.btn(href="/indianapolis/activities") Learn about things to do
     #hotels.tertiary
       section.item
         h2 Where to Stay
-        img(src="images/monument.jpg", alt="Soldiers and Sailors statue in Indy")
+        .photo.img-about
+          img(src="images/monument.jpg", alt="Soldiers and Sailors statue in Indy")
+          .photo-overlay
+            p.text-photo Soldiers and Sailors Monument
+            a.btn-photo(href="https://en.wikipedia.org/wiki/Soldiers%27_and_Sailors%27_Monument_(Indianapolis)", target="_blank") Learn More
       article.learn
         p
           | Indianapolis has accommodations for every type of traveler, from name-brand hotels, one-of-a-kind art 
@@ -46,11 +71,15 @@ block main
           br
           | See our list of excellent and highly rated hotels, which is updated weekly. We are sure to have the perfect 
           | place for you to stay.
-        a.callout(href="hotels.html") Learn where to stay
+        a.btn(href="/indianapolis/hotels") Learn where to stay
     #subscribe.quaternary
       section.item
         h2 Photo Gallery
-        img(src="images/sunset.jpg", alt="picture of a sunset")
+        .photo.img-about
+          img(src="images/sunset.jpg", alt="picture of a sunset")
+          .photo-overlay
+            p.text-photo Midwest Sunsets
+            a.btn-photo(href="https://www.thedailybeast.com/the-stunning-beauty-of-flyover-country-sunsets?ref=author", target="_blank") Learn More
       article.learn
         p
           | Sunsets in Indianapolis are just one of the beautiful and picturesque images one can capture in
@@ -59,4 +88,7 @@ block main
           br
           | Check out our photo gallery of images taken in Indianapolis by photographer Bert Witzel, and come to the city
           | soon to capture your own image!
-        a.callout(href="gallery.html") See our photo gallery
+        a.btn(href="/indianapolis/gallery") See our photo gallery
+
+block script 
+  script(type="text/javascript" src="/javascripts/indexScripts.js")

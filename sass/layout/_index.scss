@@ -1,4 +1,4 @@
-@import 'header',
-        'main',
-        'footer',
-        'grid';
+@use 'header';
+@use 'main';
+@use 'footer';
+@use 'grid';

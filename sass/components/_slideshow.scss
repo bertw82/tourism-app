@@ -1,0 +1,58 @@
+@use'../utilities/mixins';
+@use '../utilities/variables';
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  // height: $bg-height;
+}
+
+.slideshow-pictures {
+  display: none;
+}
+
+// next, prev buttons
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: 30px;
+  padding: 10px;
+  color: variables.$white;
+  font-weight: bold;
+  font-size: 45px;
+  transition: .6s ease;
+  user-select: none;
+  z-index: 2000;
+  background-color: rgba(0,0,0,.4);
+  @include mixins.mq(med) {
+    width: 45px;
+    font-size: 50px;
+  }
+  @include mixins.mq(lg){
+    width: 70px;
+    font-size: 60px;
+  }
+}
+
+.prev {
+  left:0;
+  border-radius: 0 3px 3px 0;
+
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1;}
+}

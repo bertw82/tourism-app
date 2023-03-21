@@ -1,3 +1,6 @@
+@use '../utilities/variables';
+@use'../utilities/mixins';
+
 .overlay {
   height: 100%;
   width: 0;
@@ -6,7 +9,7 @@
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
-  background-color: $color-overlay-bg;
+  background-color: variables.$color-overlay-bg;
   overflow-x: hidden;
   transition: 0.5s;
   text-transform: uppercase;
@@ -26,7 +29,7 @@
   padding: 8px;
   text-decoration: none;
   font-size: 25px;
-  color: $white;
+  color: variables.$white;
   display: block;
   transition: 0.3s;
 }
@@ -45,7 +48,7 @@
 .main-nav span {
   margin-top: 5px;
   margin-left: 10px;
-  @include mq(med) {
+  @include mixins.mq(med) {
     display: none;
   }
 }

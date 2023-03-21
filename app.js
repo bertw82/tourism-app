@@ -28,12 +28,6 @@ app.use('/indianapolis', pagesRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
-  // const err = new Error('Not Found');
-  // err.message = 'Page Not Found';
-  // err.status = 404;
-  // console.log(`Error ${err.status}: ${err.message}`);
-  // res.render('error/error', { err });
-  // next();
 });
 
 // error handler

@@ -15,5 +15,10 @@ block main
       div 
         a(href=`../images/gallery-images/gallery-${picture.key}.jpg`, data-caption=`${picture.title}`)
           img(src=`../images/gallery-images/gallery-${picture.key}-thumbnail.jpg`, alt=`${picture.title}`)
+  
+block script 
+  script(type="text/javascript" src="/javascripts/baguetteBox.min.js")
+  script(type="text/javascript" src="/javascripts/baguetteBoxRun.js")
+  
 
   

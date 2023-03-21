@@ -1,29 +1,32 @@
+@use '../utilities/variables';
+@use'../utilities/mixins';
+
 .main-footer {
-  @include flexy($just: space-around);
-  background: $color-primary;
+  @include mixins.flexy($just: space-around);
+  background: variables.$color-primary;
 }
 
 .main-footer p {
-  @include nav-font;
-  color: $white;
+  @include mixins.nav-font;
+  color: variables.$white;
 }
 
 .main-footer a {
-  @include nav-font;
+  @include mixins.nav-font;
   &:hover {
-    color: $color-hover;
+    color: variables.$color-hover;
   }
 }
 
 .footer-flex {
   margin-top: 2em;
-  @include flexy($just: space-between);
+  @include mixins.flexy($just: space-between);
   border-top: 1px solid rgba(0,0,0,.4);
 }
 
 .indy-flex-1,
 .indy-flex-2 {
-  @include flexy($dir: column);
+  @include mixins.flexy($dir: column);
   margin-top: 1em;
   margin-bottom: 1em;
 }

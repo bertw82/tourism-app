@@ -22,8 +22,8 @@ router.get('/gallery', function(req, res, next) {
   res.render('pages/gallery', { title: 'Photo Gallery' })
 });
 
-router.get('/subscribe', function(req, res, next) {
-  res.render('pages/subscribe', { title: 'Welcome to Indianapolis!' })
+router.get('/guestbook', function(req, res, next) {
+  res.render('pages/guestbook', { title: 'Guestbook' })
 });
 
 module.exports = router;

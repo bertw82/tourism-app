@@ -1,4 +1,4 @@
-
+@use 'variables';
 // Create Flex container
 @mixin flexy(
   $disp: flex,
@@ -15,8 +15,8 @@
           
 // Media Queries
 @mixin mq($break) {
-$value: map-get($breakpoints, $break);
-$sm: map-get($breakpoints, 'sm');            
+$value: map-get(variables.$breakpoints, $break);
+$sm: map-get(variables.$breakpoints, 'sm');            
             
   @if $value < $sm {
     @media (max-width: $value) {
@@ -39,7 +39,7 @@ $sm: map-get($breakpoints, 'sm');
 
 // Navigaton font
 @mixin nav-font {
-  font-family: $font-stack-secondary;
+  font-family: variables.$font-stack-secondary;
   font-weight: 600;
   text-transform: uppercase;
   @content;
@@ -47,12 +47,40 @@ $sm: map-get($breakpoints, 'sm');
 
 // Navigation styles
 @mixin nav-style {
-  background-color: $color-primary;
+  background-color: variables.$color-primary;
   position: fixed;
   padding: 0;
   margin-top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 4000;
   top: 0;
+  @content;
+}
+
+// background image height
+@mixin image-height {
+  height: variables.$bg-height;
+  margin-top: ems(37);
+  @include mq(med) {
+    margin-bottom: 1em;
+    height: variables.$bg-height-med;
+    padding: 0;
+  }
+  @include mq(lg) {
+    height: variables.$bg-lg-height;
+  }
+  @include mq(x-lg) {
+    height: variables.$bg-xl-height;
+  }
+}
+
+@mixin btn-style {
+  cursor: pointer;
+  background: variables.$color-btn;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: .6125em;
+  border-radius: 0 .625em 0 .625em ;
+  transition: all .5s ease-out;
   @content;
 }

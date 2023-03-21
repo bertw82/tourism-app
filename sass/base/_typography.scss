@@ -1,85 +1,112 @@
+@use '../utilities/functions';
+@use '../utilities/variables';
+@use'../utilities/mixins';
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  color: $color-text;
-  background: $color-bg;
+  color: variables.$color-text;
+  background: variables.$color-bg;
   margin: 0;
   padding: 0;
-  font-family: $font-stack-primary;
+  font-family: variables.$font-stack-primary;
   text-align: center;
 }
 
 h1 {
-  font-family: $font-stack-headline;
-  padding: 1.9em 1em 0 1em;
+  font-family: variables.$font-stack-headline;
+  padding: 2.9em 1em 0 1em;
   margin-top: 0;
-  color: $white;
+  color: variables.$white;
   text-shadow: 1px 3px 1px rgba(0,0,0,.4);
-  font-size: 2.4em;
-  @include mq(med) { 
+  font-size: 2em;
+  @include mixins.mq(med) { 
       font-size: 3.2rem;
       padding: 2.4em 0 2.4em 0;
   }
-  @include mq(lg) {
-    font-size: 4.2rem;
+  @include mixins.mq(lg) {
+    font-size: 4rem;
   }
-  @include mq(x-lg) {
+  @include mixins.mq(x-lg) {
     font-size: 5rem;
   }
   .brochure & {
     padding: 1.9em 1.6em 0 1.6em;
-    @include mq(med) { 
+    @include mixins.mq(med) { 
       font-size: 3.2rem;
       padding: 2.4em 1em 0 1em;
     }
-    @include mq(lg) {
+    @include mixins.mq(lg) {
       font-size: 4.2rem;
     }
-    @include mq(x-lg) {
+    @include mixins.mq(x-lg) {
       font-size: 5rem;
     }
   }
 }
 
+.home-title {
+  position: absolute;
+  z-index: 1000;
+  @include mixins.mq(med) {
+    left: 8%;
+    top: 10%;
+  }
+  @include mixins.mq(lg) {
+    left: 10%;
+  }
+  @include mixins.mq(x-lg) {
+    left: 8%;
+  }
+  @include mixins.mq(xxl) {
+    left: 14%;
+  }
+ }
+
 h2 {
   font-size: 1.3125rem;
-  @include mq(lg) {
+  @include mixins.mq(lg) {
     font-size: 2rem;
   }
+}
+
+.sports h3{
+  color: variables.$white;
+  font-size: 1.6rem;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.6;
-  @include mq(lg) {
+  @include mixins.mq(lg) {
     font-size: 1.1rem; 
   }
   .footer-flex & {
     font-weight: bold;
   }
-  .tips & {
+  .article & {
     text-align: justify;
     &:first-child::first-letter {
       float: left;
-      font-size: ems(40);
-      padding: ems(7) ems(10);
-      margin: ems(2) ems(5) 0 0;
-      background: $complement;
-      color: $white;
+      font-size: functions.ems(40);
+      padding: functions.ems(7) functions.ems(10);
+      margin: functions.ems(2) functions.ems(5) 0 0;
+      background: variables.$complement;
+      color: variables.$white;
       line-height: 1;
-      border-radius: ems(2);
+      border-radius: functions.ems(2);
       // border: 1px solid $color-overlay-bg;
     }
   }
   .learn & {
-    @include mq(med) {
+    @include mixins.mq(med) {
       width: 90%;
       margin: 0 auto;
       padding-top: 1em;
     }
-    @include mq(lg) {
+    @include mixins.mq(lg) {
       margin-top: 83px;
       padding: 0 2em 0;
     }
@@ -99,7 +126,7 @@ p {
 }
 
 a {
-  color: $white;
+  color: variables.$white;
   &:link {
     text-decoration: none;
   }
@@ -107,10 +134,10 @@ a {
     color: rgb(255, 255, 155);
   }
   .indy-flex-1 & {
-    color: $color-primary;
+    color: variables.$color-primary;
   }
-  .tips p & {
-    color: $color-primary-light;
+  .article p & {
+    color: variables.$color-primary-light;
     text-decoration: underline;
   }
 }

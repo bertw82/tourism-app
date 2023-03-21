@@ -1,32 +1,36 @@
+@use '../utilities/functions';
+@use '../utilities/variables';
+@use'../utilities/mixins';
+
 /* Table Styles */
 
 caption {
   font-size: 1.3125rem;
   font-weight: 600;
   padding: .9em;
-  @include mq(lg) {
+  @include mixins.mq(lg) {
     font-size: 2rem;
   }
 }
 
 table {
   margin: 0 auto 2em;
-  border-radius: ems(5);
-  box-shadow: 0 ems(5) ems(3) ems(2);
+  border-radius: functions.ems(5);
+  box-shadow: 0 functions.ems(5) functions.ems(3) functions.ems(2);
   color: rgb(34, 34, 34);
-  @include mq(med) {
+  @include mixins.mq(med) {
     width: 35em;
   }
 }
 
 thead > tr {
-  background: $color-table-blue;
+  background: variables.$color-table-blue;
 }
 
 th[scope="col"] {
-  background-color: $color-table-blue-dark;
+  background-color: variables.$color-table-blue-dark;
   font-size: 1.125rem;
-  @include mq(lg) {
+  @include mixins.mq(lg) {
     font-size: 1.3125rem;
   }
 }
@@ -34,7 +38,7 @@ th[scope="col"] {
 th {
   font-size: .9rem;
   padding: .3125em;
-  @include mq(med) {
+  @include mixins.mq(med) {
     padding: 1em 2em 1em 2em;
   }
 } 
@@ -45,11 +49,11 @@ td[colspan="3"] {
 
 tr {
   height: 3em;
-  background: $color-table-grey;
+  background: variables.$color-table-grey;
   & > td {
     font-size: .8rem;
     padding: .3125em;
-    @include mq(med) {
+    @include mixins.mq(med) {
       padding: 2em;
     }
   }

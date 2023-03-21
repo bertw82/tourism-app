@@ -352,11 +352,11 @@ body {
 
 h1 {
   font-family: "Permanent Marker", cursive;
-  padding: 1.9em 1em 0 1em;
+  padding: 2.9em 1em 0 1em;
   margin-top: 0;
   color: #fff;
   text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.4);
-  font-size: 2.4em;
+  font-size: 2em;
 }
 @media (min-width: 768px) {
   h1 {
@@ -366,7 +366,7 @@ h1 {
 }
 @media (min-width: 992px) {
   h1 {
-    font-size: 4.2rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 1200px) {
@@ -394,6 +394,32 @@ h1 {
   }
 }
 
+.home-title {
+  position: absolute;
+  z-index: 1000;
+}
+@media (min-width: 768px) {
+  .home-title {
+    left: 8%;
+    top: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .home-title {
+    left: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .home-title {
+    left: 8%;
+  }
+}
+@media (min-width: 1400px) {
+  .home-title {
+    left: 14%;
+  }
+}
+
 h2 {
   font-size: 1.3125rem;
 }
@@ -401,6 +427,11 @@ h2 {
   h2 {
     font-size: 2rem;
   }
+}
+
+.sports h3 {
+  color: #fff;
+  font-size: 1.6rem;
 }
 
 p {
@@ -415,15 +446,15 @@ p {
 .footer-flex p {
   font-weight: bold;
 }
-.tips p {
+.article p {
   text-align: justify;
 }
-.tips p:first-child::first-letter {
+.article p:first-child::first-letter {
   float: left;
   font-size: 2.5em;
   padding: 0.4375em 0.625em;
   margin: 0.125em 0.3125em 0 0;
-  background: #414101;
+  background: #ff5400;
   color: #fff;
   line-height: 1;
   border-radius: 0.125em;
@@ -461,42 +492,17 @@ a:active {
   color: #ffff9b;
 }
 .indy-flex-1 a {
-  color: #010141;
+  color: #03045e;
 }
-.tips p a {
-  color: #0303bf;
+.article p a {
+  color: #0608c1;
   text-decoration: underline;
 }
 
-.banner {
-  height: 15em;
-  background: linear-gradient(#27a1ca, #0c0cbb), url("../images/city.jpg") no-repeat center/cover;
-  background-blend-mode: soft-light;
-  margin-top: 2.3125em;
-  background-position: top;
-}
-@media (min-width: 768px) {
-  .banner {
-    margin-bottom: 1em;
-    height: 18em;
-  }
-}
-@media (min-width: 992px) {
-  .banner {
-    height: 25em;
-    background-position: center top;
-  }
-}
-@media (min-width: 1200px) {
-  .banner {
-    height: 28em;
-  }
-}
-
 .mlk {
-  height: 15em;
   background: url("../images/parks.jpg") no-repeat center/cover;
-  margin-top: 2.3125em;
+  height: 18em;
+  margin-top: ems(37);
 }
 @media (min-width: 768px) {
   .mlk {
@@ -517,14 +523,15 @@ a:active {
 }
 
 .racetrack {
-  height: 15em;
-  margin-top: 2.3125em;
   background: linear-gradient(#ff0101, transparent 90%), linear-gradient(to right, #fff, transparent), orange url("../images/indy-500.jpg") no-repeat center/cover;
+  height: 18em;
+  margin-top: ems(37);
 }
 @media (min-width: 768px) {
   .racetrack {
     margin-bottom: 1em;
     height: 18em;
+    padding: 0;
   }
 }
 @media (min-width: 992px) {
@@ -539,8 +546,8 @@ a:active {
 }
 
 .hotels {
-  height: 15em;
-  margin-top: 2.3125em;
+  height: 18em;
+  margin-top: ems(37);
   background: linear-gradient(cyan, transparent), linear-gradient(225deg, magenta, transparent), linear-gradient(45deg, red, transparent), url("../images/skyline.jpg") no-repeat center/cover;
 }
 @media (min-width: 768px) {
@@ -562,17 +569,18 @@ a:active {
 }
 
 .brochure {
-  height: 15em;
   background: radial-gradient(rgba(223, 223, 0, 0.5), rgba(58, 58, 255, 0.5)), url("../images/bridge.jpg") no-repeat center/cover;
   background-blend-mode: lighten;
   padding-right: 1em;
   padding-left: 1em;
-  margin-top: 2.3125em;
+  height: 18em;
+  margin-top: ems(37);
 }
 @media (min-width: 768px) {
   .brochure {
     margin-bottom: 1em;
     height: 18em;
+    padding: 0;
   }
 }
 @media (min-width: 992px) {
@@ -586,84 +594,38 @@ a:active {
   }
 }
 
-.callout {
-  background: #010141;
+.btn {
+  cursor: pointer;
+  background: #0077b6;
   font-weight: 600;
   letter-spacing: 1px;
   padding: 0.6125em;
-  transition: background 0.5s ease-out, letter-spacing 0.5s ease-out;
+  border-radius: 0 0.625em 0 0.625em;
+  transition: all 0.5s ease-out;
   display: block;
   width: 90%;
   margin: 0 auto;
-  border-radius: 0 0.625em 0 0.625em;
 }
-.callout:hover {
-  background: #0303bf;
-  letter-spacing: 2px;
+.btn:hover {
+  background-color: #04a8ff;
 }
 @media (min-width: 768px) {
-  .callout {
+  .btn {
     margin: auto auto 0;
   }
 }
-
-/* Float Clearfix ------------------ */
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* CSS Accordion ------------------ */
-.tab-p {
-  background: #414101;
-  color: #fff;
+.btn-photo {
   cursor: pointer;
-  display: block;
-  font-weight: bold;
-  line-height: 3;
-  margin-bottom: 0.5em;
-  padding-left: 0.5em;
-  transition: letter-spacing 0.55s;
-}
-.tab-p:hover {
+  background: #0077b6;
+  font-weight: 600;
   letter-spacing: 1px;
+  padding: 0.6125em;
+  border-radius: 0 0.625em 0 0.625em;
+  transition: all 0.5s ease-out;
+  padding: 1.2em;
 }
-.tab-p:hover:hover {
-  background-color: #8c8c02;
-}
-.tab-group {
-  margin: 1em auto 0;
-  max-width: 40em;
-  width: 100%;
-}
-.tab-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.35s;
-}
-.tab-content p {
-  margin: 1em 0;
-}
-
-/* open the tab when label is checked */
-.tab-clicked {
-  max-height: 14.25em;
-}
-.tab-clicked p {
-  margin: 1em 0;
-  background-color: #fff;
-  color: #424141;
-}
-@media (min-width: 768px) {
-  .tab-clicked {
-    max-height: 6.25em;
-  }
-}
-
-.tab > input:not(:focus) ~ .tab-content {
-  max-height: 0;
-  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
+.btn-photo:hover {
+  background-color: #04a8ff;
 }
 
 img {
@@ -675,19 +637,20 @@ img {
     margin-left: 0;
   }
 }
-img[src^="images/colts.jpg"] {
+img[src$="images/colts.jpg"] {
   padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 0.3125em;
 }
 @media (min-width: 768px) {
-  img[src^="images/colts.jpg"] {
+  img[src$="images/colts.jpg"] {
     width: 60%;
     float: right;
     margin-left: 0.625em;
   }
 }
 @media (min-width: 992px) {
-  img[src^="images/colts.jpg"] {
+  img[src$="images/colts.jpg"] {
     width: 50%;
     margin-left: 1em;
   }
@@ -695,18 +658,22 @@ img[src^="images/colts.jpg"] {
 img[src$="thumbnail.jpg"] {
   width: 280px;
 }
-img[src^="images/city-hall.jpg"] {
+img[src$="images/city-hall.jpg"] {
   padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
 }
 @media (min-width: 992px) {
-  img[src^="images/city-hall.jpg"] {
+  img[src$="images/city-hall.jpg"] {
     width: 75%;
   }
 }
 
 .park-picture {
   position: relative;
+}
+.park-picture img {
+  border-radius: 5px;
 }
 @media (min-width: 768px) {
   .park-picture {
@@ -728,11 +695,54 @@ img[src^="images/city-hall.jpg"] {
   position: absolute;
   bottom: 0;
   width: 100%;
+  border-radius: 0 0 5px 5px;
 }
 @media (min-width: 768px) {
   .park-picture figcaption {
     padding: 1em;
   }
+}
+
+.photo {
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.photo-overlay {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.photo-overlay p {
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.photo-overlay:hover {
+  opacity: 1;
+}
+
+.photo img {
+  transform-origin: 0 0;
+  transition: transform 0.4s ease-out;
+}
+
+.photo:hover img {
+  transform: scale(1.1);
 }
 
 /* Table Styles */
@@ -807,12 +817,12 @@ tr:nth-child(2n+2) {
 
 .main-nav {
   display: flex;
-  background-color: #010141;
+  background-color: #03045e;
   position: fixed;
   padding: 0;
   margin-top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 4000;
   top: 0;
   height: 3.125em;
 }
@@ -824,7 +834,7 @@ tr:nth-child(2n+2) {
 }
 .main-nav a {
   display: block;
-  transition: transform 0.2s, color 0.2s;
+  transition: transform 0.35s, color 0.2s;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -916,6 +926,161 @@ tr:nth-child(2n+2) {
   }
 }
 
+/* Float Clearfix ------------------ */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+}
+
+.slideshow-pictures {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: 30px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 45px;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 768px) {
+  .prev, .next {
+    width: 45px;
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .prev, .next {
+    width: 70px;
+    font-size: 60px;
+  }
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Accordion ------------------ */
+.tab-p {
+  background: #ff5400;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 3;
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  transition: letter-spacing 0.55s;
+}
+.tab-p:hover {
+  letter-spacing: 1px;
+}
+.tab-p:hover:hover {
+  background-color: #ff874d;
+}
+.tab-group {
+  margin: 1em auto 0;
+  max-width: 40em;
+  width: 100%;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab-content p {
+  margin: 1em 0;
+  opacity: 0;
+}
+
+/* open the tab when label is checked */
+.tab-clicked {
+  max-height: 14.25em;
+  background-color: #f8f8ff;
+  transition: all 0.35s;
+}
+.tab-clicked p {
+  margin: 1em 0;
+  color: #424141;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .tab-clicked {
+    max-height: 6.25em;
+  }
+}
+
+.sports {
+  margin: 2em auto;
+  max-width: 40em;
+  border-radius: 1.25em;
+  padding: 1.25em;
+  background-color: #00b4d8;
+}
+.sports-div {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .sports-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 768px) {
+  .sports-basketball {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .sports-football {
+    flex-basis: 50%;
+  }
+}
+
+.transform {
+  transition: transform 0.3s linear;
+}
+
+.transform:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
 @media (min-width: 768px) {
   .photo-gallery {
     margin: 0 auto;
@@ -950,55 +1115,13 @@ main {
   max-width: 1000px;
 }
 
-.tips {
+.article {
   margin: 2em auto 0;
 }
 @media (min-width: 768px) {
-  .tips {
+  .article {
     max-width: 40em;
     flex-basis: 85em;
-  }
-}
-
-.sports {
-  background-color: #acacff;
-  border-radius: 0.3125em;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 1em;
-  margin-top: 2em;
-}
-.sports img {
-  width: 6.25em;
-  border-radius: 5px;
-}
-.sports-link {
-  display: inline-block;
-  width: 7em;
-  padding: 0.625em;
-  background: #010141;
-  color: #fff;
-  border-radius: 0.3125em;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
-  transition: background ease-in-out 0.3s, color ease-in-out 0.3s, transform ease-in-out 0.3s;
-}
-.sports-link:hover {
-  background: #0303bf;
-  border-radius: 0.3125em;
-  transform: skewX(-5deg);
-}
-.sports > div {
-  width: 50%;
-  margin-bottom: 1em;
-}
-@media (min-width: 768px) {
-  .sports > div {
-    width: 33.33%;
-  }
-}
-@media (min-width: 992px) {
-  .sports > div {
-    width: 16.66%;
   }
 }
 
@@ -1007,7 +1130,7 @@ main {
 }
 
 .aside-know {
-  background: darkcyan;
+  background: #00b4d8;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
@@ -1033,7 +1156,7 @@ main {
 .main-footer {
   display: flex;
   justify-content: space-around;
-  background: #010141;
+  background: #03045e;
 }
 
 .main-footer p {

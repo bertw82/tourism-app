@@ -1,8 +1,13 @@
-@import 'background-images',
-        'buttons',
-        'css-designs',
-        'images',
-        'tables',
-        'nav',
-        'overlay',
-        'grid';
+@use 'bg-images';
+@use 'buttons';
+@use 'images';
+@use 'tables';
+@use 'nav';
+@use 'overlay';
+@use 'float-clearfix';
+@use 'slideshow';
+@use 'accordion';
+@use 'sports-svgs';
+@use 'photo-gallery';
+
+

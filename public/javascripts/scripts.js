@@ -1,10 +1,9 @@
+// variables
 const mainNav = document.getElementById("mainNav");
 const mobileNavMenu = document.getElementById("mobileNav");
 const closeBtn = document.querySelector('.closebtn');
 const tabGroup = document.querySelector('.tab-group');
 const tab = document.querySelectorAll('.tab');
-console.log(tab);
-
 
 // Click to open the navigation in mobile view
 mainNav.addEventListener('click', e => {
@@ -31,6 +30,6 @@ tab.forEach(tab => tab.addEventListener("click", () => {
   }
 }))
 
-// run the baguetteBox gallery
-baguetteBox.run('.photo-gallery');
+
+
 

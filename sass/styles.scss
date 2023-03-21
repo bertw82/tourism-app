@@ -2,10 +2,10 @@
 //  Partial Imports
 // ======================================
 
-@import 'utilities',
-        'base',
-        'components',
-        'layout';
+@use 'utilities';
+@use 'base';
+@use 'components';
+@use 'layout';
 
 
 

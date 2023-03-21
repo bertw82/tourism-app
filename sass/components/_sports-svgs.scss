@@ -1,0 +1,36 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+@use '../utilities/variables';
+
+.sports {
+  margin: 2em auto;
+  max-width: 40em;
+  border-radius: functions.ems(20);
+  padding: functions.ems(20);
+  background-color: variables.$color-bg-alt;
+  &-div{
+    @include mixins.flexy($dir: column);
+  
+    @include mixins.mq(med){
+      @include mixins.flexy($dir: row,$just:space-around);
+    }
+  }
+  &-basketball {
+    @include mixins.mq(med){
+      flex-basis: 50%;
+    }
+  }
+  &-football {
+    @include mixins.mq(med){
+      flex-basis: 50%;
+    }
+  }
+}
+
+.transform{
+  transition: transform .3s linear;
+}
+
+.transform:hover{
+  transform: scale(1.2) rotate(360deg);
+}

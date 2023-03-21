@@ -5,47 +5,61 @@ block content
     h1= title
 
 block main 
-  article.tips.clearfix
+  article.article.clearfix
     p
       | Indianapolis has long been a sports tourism destination. Each year on Memorial Day weekend the
       | famous Indy 500 race is held at the Indianapolis Speedway. The city also has two professional 
       | sports franchises, the Colts and the Pacers, along with numerous minor-league franchises.
     div
-      img(src="images/colts.jpg", alt="Indianapolis Colts sign in shape of a horseshoe that reads 'Believe!'")
+      img(src="../images/colts.jpg", alt="Indianapolis Colts sign in shape of a horseshoe that reads 'Believe!'")
     p
       | The NCAA keeps its head-quarters in Indy, and the NCAA Men&apos;s and Women&apos;s Divisional 
       | Champion-ships are frequently held here. The Indianapolis Convention Center is also a popular 
       | destination and each year holds the biggest gaming convention in North America:
       a(href="https://www.gencon.com/", target="_blank") GenCon
       | .
+  h2 Sports Franchises
+    p Indianapolis is home to two major league professional sports franchises:
   .sports
-    div
-      h3
-        a.sports-link(href="https://www.colts.com", target="_blank") Colts
-      a(href="https://icons8.com/icon/65735/american-football", target="_blank")
-        img(src="https://img.icons8.com/ios/100/000000/american-football.png")
-    div
-      h3
-        a.sports-link(href="https://www.nba.com/pacers/", target="_blank") Pacers
-      a(href="https://icons8.com/icon/65728/basketball-player", target="_blank")
-        img(src="https://img.icons8.com/ios/100/000000/basketball-2.png")
-    div
-      h3
-        a.sports-link(href="https://www.indianapolismotorspeedway.com/events/indy500", target="_blank") Indy 500
-      a(href="https://icons8.com/icon/190/finish-flag", target="_blank")
-        img(src="https://img.icons8.com/ios/100/000000/finish-flag.png")
-    div
-      h3
-        a.sports-link(href="https://www.indyfuelhockey.com/", target="_blank") Indy Fuel
-      a(href="https://icons8.com/icon/6344/hockey", target="_blank")
-        img(src="https://img.icons8.com/ios/100/000000/hockey.png")
-    div
-      h3
-        a.sports-link(href="https://www.milb.com/indianapolis", target="_blank") Indians
-      a(href="https://icons8.com/icon/66957/baseball-player", target="_blank")
-        img(src="https://img.icons8.com/ios/100/000000/baseball-player.png")
-    div
-      h3
-        a.sports-link(href="https://www.indyeleven.com/", target="_blank") Indy Eleven
-      a(href="https://icons8.com/icon/192/soccer", target="_blank")
-        img(src="https://img.icons8.com/ios/100/000000/football.png")
+    .sports-div
+      div
+        h3 Indiana Pacers
+        .sports-basketball 
+          //- SVG by Andrew Simonetti, CC0, via Wikimedia Commons
+          //- https://commons.wikimedia.org/wiki/File:Basketball_(11389)_-_The_Noun_Project.svg
+          svg(class="transform" version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 100 99.999", enable-background="new 0 0 100 99.999", xml:space="preserve")
+            path(fill="#f8f8ff" d="M91.573,22.219l-0.725-0.528l-2.245-2.042l-3.144-2.451l-3.146-1.471l-5.637-2.246l-4.7-1.267l-3.389-0.571\
+        l-4.454-0.531h-5.311l-6.046,0.163l-3.841,0.573l-3.759,0.816l-4.575,1.144l-4.002,1.226l-4.004,1.471l-3.84,2.125l-4.575,2.123\
+        l-2.615,1.797l-2.614,2.778l-0.326,1.308l0.816,1.551l1.064,1.471l2.612,2.207l3.922,1.633l3.35,0.736l4.657,0.898l6.046,1.308\
+        l4.942,0.98l5.761,1.389l14.052,3.759l9.803,3.267l9.969,3.84l6.208,2.777l-0.734,1.963l-4.822-1.963l-5.309-2.285l-7.11-2.451\
+        l-5.637-2.042l-6.371-1.633l-6.783-1.961l-6.208-1.553l-7.394-1.797l-5.433-1.226l-7.434-1.226l-4.087-1.307l-3.676-1.797\
+        l-1.796-1.553l-2.043-2.695l-1.062-1.797l-3.431,2.696l-2.777,3.186l0.326,1.307l1.715,4.902l2.287,4.249l3.431,5.638l7.026,8.497\
+        l7.763,7.922l7.271,5.965l7.189,5.065l7.598,4.25l6.781,2.778l6.373,1.877l3.839,0.732l3.595,0.085l5.147,0.164l2.614-0.328\
+        l-2.451,1.227l-2.778,0.489l-4.493,0.082l-4.249-0.407l-5.146-1.062l-4.491-1.472l-5.392-2.288L43.056,76.39l-7.517-5.393\
+        l-7.434-6.128l-8.334-9.068l-4.493-6.21l-3.595-6.373l-2.37-4.983l-0.569-2.941H8.006l-2.777,3.351l-1.307,3.022l1.062,5.065\
+        l1.47,6.453l1.879,7.846l2.369,8.537l3.267,7.149l5.312,7.678l4.657,4.166l3.023,2.451l5.311,3.432l-5.965-3.104l-7.026-5.801\
+        l-3.921-4.983l-3.269-5.146l-3.431-8.904l-2.451-8.09l-1.144-5.963l-0.734-2.697l-0.817-3.267L2.859,44.69h-0.49l-1.062,2.368\
+        l-0.572,4.249l-0.393,4.461C3.203,80.664,24.339,99.999,50,99.999C77.614,99.999,100,77.614,100,50\
+        C100,39.719,96.894,30.165,91.573,22.219z")
+            path(fill="#f8f8ff" d="M3.307,39.216l1.961-2.818l2.247-3.105v-0.367l0.122-2.451V26.47l0.205-3.063l0.197-0.584\
+        c-2.297,3.539-4.157,7.385-5.506,11.464l0.366,2.232L3.307,39.216z")
+            path(fill="#f8f8ff" d="M1.512,43.996l0.775-2.125L2.166,38.44l0.18-3.596C0.826,39.625,0,44.716,0,50\
+        c0,0.45,0.022,0.896,0.035,1.344l0.455-3.345L1.512,43.996z")
+            path(fill="#f8f8ff" d="M9.233,31.25l0.408-0.245l2.533-2.859l3.39-2.696l-0.081-0.409l0.04-3.431l0.164-2.125l0.94-2.287\
+        l2.328-4.085l3.432-3.35l3.471-2.981l7.804-4.037C23.75,6.172,15.257,12.625,9.281,21.003l-0.417,2.158v3.391l0.122,2.125\
+        L9.233,31.25z")
+            path(fill="#f8f8ff" d="M26.265,7.64l-3.513,2.9l-2.859,3.553l-2.411,3.964l-0.572,2.123l0.287,1.43l1.021,0.695l1.184-0.123\
+        l2.124-1.307l5.678-3.227l6.373-2.9l7.353-2.534l6.047-1.511l5.227-0.654l5.598-0.204h6.129l5.92,0.695l5.066,1.307l4.044,1.349\
+        l4.166,2.409l4.736,2.942l3.375,3.188C82.227,8.612,67.123,0,50,0c-5.566,0-10.914,0.923-15.915,2.602l-5.04,2.913L26.265,7.64z")
+      div
+        h3 Indianapolis Colts
+        .sports-football 
+          //- SVG by Andrew Simonetti, CC0, via Wikimedia Commons
+          //- https://commons.wikimedia.org/wiki/File:Football_(11390)_-_The_Noun_Project.svg
+          svg(class="transform" xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", version="1.1", x="0px", y="0px", viewBox="0 0 100 100", enable-background="new 0 0 100 100", xml:space="preserve")
+            g
+              defs
+                rect#b(x="19", y="5.069", width="60.793", height="91.931")
+              clippath#a
+                use(xlink:href="#b", overflow="visible")
+              path(fill="#f8f8ff" clip-path="url(#a)", d="M40.562,18.081c0.003,0.028,0.017,0.052,0.017,0.081c0,0.391-0.274,0.705-0.636,0.798   l-0.177,0.252l-0.929-0.211h-0.518l-0.852,1.573l-1.22,1.994h1.132c0.435,0,0.788,0.353,0.788,0.787   c0,0.433-0.353,0.786-0.788,0.786h-2.096l-0.578,0.944l-0.997,1.783h0.578c0.521,0,0.944,0.423,0.944,0.944   s-0.423,0.944-0.944,0.944h-1.632l-0.938,1.678c0,0-0.119,0.663-0.376,1.784h1.103c0.463,0,0.839,0.375,0.839,0.838   c0,0.463-0.376,0.839-0.839,0.839h-1.514c-0.323,1.246-0.755,2.773-1.323,4.511h0.904c0.405,0,0.734,0.328,0.734,0.733   c0,0.406-0.329,0.735-0.734,0.735h-1.398c-0.025,0.072-0.045,0.137-0.071,0.209c-0.465,1.322-0.823,2.851-1.122,4.406h1.28   c0.434,0,0.786,0.352,0.786,0.787c0,0.434-0.352,0.786-0.786,0.786h-1.56c-0.241,1.499-0.434,2.986-0.565,4.301h1.6   c0.434,0,0.786,0.352,0.786,0.787c0,0.434-0.352,0.786-0.786,0.786H26.93c-0.153,1.878-0.196,3.146-0.196,3.146l-0.043,1.784h1.249   c0.493,0,0.892,0.398,0.892,0.891c0,0.491-0.399,0.891-0.892,0.891h-1.291l-0.02,0.841l-0.734,0.628l-0.839-1.047v-0.422h-0.682   c-0.493,0-0.892-0.399-0.892-0.891c0-0.492,0.399-0.891,0.892-0.891h0.682V53.09c0,0,0.027-0.43,0.09-1.153h-0.877   c-0.434,0-0.787-0.353-0.787-0.786c0-0.436,0.353-0.787,0.787-0.787h1.032c0.128-1.183,0.322-2.682,0.583-4.301h-0.567   c-0.434,0-0.786-0.352-0.786-0.786c0-0.435,0.352-0.787,0.786-0.787h0.835c0.115-0.622,0.235-1.251,0.372-1.888   c0.296-1.372,0.453-2.161,0.572-2.727h-0.205c-0.405,0-0.734-0.329-0.734-0.735c0-0.405,0.329-0.733,0.734-0.733h0.573   c0.224-0.738,0.607-1.841,1.485-4.511h-0.117c-0.464,0-0.84-0.376-0.84-0.839c0-0.463,0.376-0.838,0.84-0.838h0.666   c0.024-0.075,0.043-0.134,0.068-0.21c0.369-1.134,0.792-2.218,1.248-3.252h-0.409c-0.522,0-0.945-0.423-0.945-0.944   s0.423-0.944,0.945-0.944h1.308c0.498-0.98,1.015-1.874,1.534-2.727h-0.692c-0.434,0-0.786-0.353-0.786-0.786   c0-0.434,0.352-0.787,0.786-0.787h1.688c1.012-1.515,1.961-2.734,2.7-3.623c-0.325-0.116-0.56-0.419-0.56-0.783   c0-0.463,0.376-0.839,0.839-0.839h2.518c0.423,0,0.759,0.319,0.816,0.727l0.023,0.007L40.562,18.081z M79.003,35.236   c-0.909-8.461-3.007-12.167-3.775-14.124c-0.769-1.959-1.539-4.406-4.126-7.692c-2.586-3.287-3.147-3.357-4.895-5.315   c-1.749-1.958-5.734-3.006-5.734-3.006s-1.259-0.21-4.195,0.489c-2.936,0.699-2.027,0.28-8.251,3.287   c-0.434,0.209-0.89,0.48-1.338,0.726c0.803-0.09,2.601-0.277,6.092-0.564c5.106-0.419,16.921,5.13,16.921,5.13l1.68,2.981   l0.839,4.476l-4.614-2.307c0,0-2.239-1.05-7.623-3.077c-5.385-2.028-8.67-1.678-13.215-2.028c-3.244-0.25-6.586,0.603-8.238,1.113   c-3.339,2.794-6.381,5.845-8.334,8.304c-3.776,4.754-11.467,20.488-11.188,31.886c0.146,5.94,0.35,9.287,0.629,11.625   c0.601-0.487,1.643-1.314,2.116-1.567c0.682-0.369,4.195-0.944,4.195-0.944h3.776c3.357,0,5.716,0.682,8.811,0.997   c3.094,0.312,12.586,3.355,12.586,3.355l9.231,4.615l-7.92,9.02l-8.233-3.461c0,0-3.672-1.101-6.661-1.888s-7.08-0.997-8.6-0.943   c-1.521,0.053-3.672-0.159-5.245,0.891c-0.457,0.305-0.76,0.624-0.978,0.928c0.498,1.125,1.164,2.626,2.08,4.729   c3.724,8.549,8.443,11.907,9.649,12.744c1.207,0.84,3.724,1.363,3.724,1.363c2.622-0.051,1.049,0.491,6.712-1.817   c5.664-2.307,9.371-4.754,14.405-9.09c5.035-4.335,10.28-10.627,12.447-14.543s6.083-10.28,7.271-19.789   C80.191,42.229,79.911,43.697,79.003,35.236")

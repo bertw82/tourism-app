@@ -1,3 +1,6 @@
+@use '../utilities/functions';
+@use'../utilities/mixins';
+
 .primary {
   grid-area: primary;
 }
@@ -23,15 +26,15 @@
 }
 
 .container {
-  @include mq(med) {
+  @include mixins.mq(med) {
     display: grid;
-    grid-gap: ems(20);
+    grid-gap: functions.ems(20);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
       "primary secondary"
       "tertiary quaternary";
   }
-  @include mq(lg) {
+  @include mixins.mq(lg) {
     display: initial;
   }
 }
@@ -40,20 +43,20 @@
 .secondary,
 .tertiary,
 .quaternary {
-  @include mq(lg) {
+  @include mixins.mq(lg) {
     margin-top: 1em;
-    @include flexy;
+    @include mixins.flexy;
   }
 }
 
 .learn {
   margin-bottom: 3em;
-  @include mq(med) {
-    @include flexy($dir: column);
-    height: ems(300);
+  @include mixins.mq(med) {
+    @include mixins.flexy($dir: column);
+    height: functions.ems(300);
     margin-bottom: 2em;
     }
-  @include mq(lg) {
+  @include mixins.mq(lg) {
     flex-basis: 87em;
     height: auto;
     margin-bottom: 0;

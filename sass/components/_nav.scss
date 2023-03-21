@@ -1,17 +1,20 @@
+@use'../utilities/mixins';
+@use '../utilities/variables';
+
 .main-nav {
   // @include flexy($just: space-around);
-  @include flexy;
-  @include nav-style {
+  @include mixins.flexy;
+  @include mixins.nav-style {
     height: 3.125em;
   };
-  @include mq(med) {
+  @include mixins.mq(med) {
     height: 3.625em;
     justify-content: space-around;
   }
   a {
     display: block;
-    transition: transform .2s, color .2s;
-    @include nav-font {
+    transition: transform .35s, color .2s;
+    @include mixins.nav-font {
       font-size: 1rem;
     };
     // @include mq(lg) {
@@ -24,7 +27,7 @@
     }
   }
   li {
-    color: $white;
+    color: variables.$white;
     list-style: none;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -32,12 +35,12 @@
     // @include mq(sm) {
     //   display: none;
     // }
-    @include mq(med) {
+    @include mixins.mq(med) {
       // display: initial;
       padding: 1.2em 1em;
     }
     &:nth-child(2) {
-      @include nav-font;
+      @include mixins.nav-font;
       margin-right: auto;  
     }
     //   @include mq(med) {       
@@ -53,7 +56,7 @@
 
 #mainNav li {
   display: none;
-  @include mq(med) {
+  @include mixins.mq(med) {
     display: initial;
   }
 }
