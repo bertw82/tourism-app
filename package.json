@@ -1,13 +1,20 @@
 {
   "name": "tourism-app",
   "version": "0.0.0",
-  "private": true,
+  "description": "A tourism app about Indianapolis",
   "main": "app.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./bin/www",
     "dev": "nodemon ./bin/www & npm run scss",
     "scss": "sass --watch sass/styles.scss public/stylesheets/style.css"
   },
+  "keywords": [
+    "tourism-app",
+    "heroku"
+  ],
+  "author": "Bert Witzel",
+  "license": "MIT",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -15,11 +22,12 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pug": "^3.0.2",
-    "sass": "^1.49.9",
-    "sequelize": "^6.17.0",
-    "sequelize-cli": "^6.4.1"
+    "sass": "^1.49.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "18.15.0"
   }
 }
