@@ -25,6 +25,12 @@
       flex-basis: 50%;
     }
   }
+  &-svg {
+    @media (max-width:767px) {
+      max-width: 200px;
+      margin:auto;
+    }
+  }
 }
 
 .transform{
